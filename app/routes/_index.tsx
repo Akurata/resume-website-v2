@@ -1,3 +1,9 @@
+import {HeroPage} from "app/components/HeroPage";
+
 export default function Index() {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <HeroPage />
+    </div>
+  );
 }
