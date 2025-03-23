@@ -1,9 +1,6 @@
 name = "resume-website-v2"
 pages_build_output_dir = "./build/client"
 
-[build]
-command = "bun install --frozen-lockfile && bun run build"
-
 [vars]
 BUN_VERSION = "1.2.5"
 NODE_VERSION = "22.14.0"
