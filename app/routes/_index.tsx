@@ -1,6 +1,8 @@
+import {ParticleBackground} from "app/components/ParticleBackground";
+
 export default function Index() {
   return (
-    <div className="relative flex h-dvh w-full flex-col overflow-hidden bg-background">
+    <div className="relative flex h-dvh w-full flex-col overflow-hidden">
       <main className="container mx-auto flex flex-1 flex-col items-center justify-center overflow-hidden px-8">
         <section className="z-20 flex flex-col items-center justify-center gap-[18px] sm:gap-6">
           <div className="text-center text-[clamp(40px,10vw,44px)] font-bold leading-[1.2] tracking-tighter sm:text-[64px]">
@@ -19,6 +21,7 @@ export default function Index() {
           </div>
         </section>
       </main>
+      <ParticleBackground />
     </div>
   );
 }
