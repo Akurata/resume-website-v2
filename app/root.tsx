@@ -40,11 +40,6 @@ export function meta(): Route.MetaDescriptors {
   ];
 }
 
-export async function clientLoader() {
-  // Load Particles engine in page load
-  await loadParticlesEngine();
-}
-
 export function Layout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className="dark">
@@ -69,6 +64,11 @@ export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
       <h1>Error</h1>
     </main>
   );
+}
+
+export async function clientLoader() {
+  // Load Particles engine in page load
+  await loadParticlesEngine();
 }
 
 export default function App() {

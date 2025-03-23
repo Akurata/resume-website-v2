@@ -1,7 +1,7 @@
 import {Link} from "react-router";
 import {Button} from "@heroui/react";
 
-export default function Index() {
+export default function TestHomePage() {
   return (
     <Button
       as={Link}
