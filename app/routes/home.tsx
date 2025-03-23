@@ -7,10 +7,12 @@ export default function Index() {
       <Button
         as={Link}
         color="primary"
-        target="_blank"
+        prefetch="render"
         to={{pathname: "/Resume.pdf"}}
+        target="_blank"
+        download
       >
-        Download
+        Resume
       </Button>
     </div>
   );
