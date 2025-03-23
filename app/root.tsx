@@ -10,6 +10,11 @@ import {
 } from "react-router";
 import {HeroUIProvider} from "@heroui/react";
 
+import {
+  ParticleBackground,
+  loadParticlesEngine,
+} from "app/components/ParticleBackground";
+
 import type {Route} from "./+types/root";
 import "./app.css";
 
@@ -33,6 +38,11 @@ export function meta(): Route.MetaDescriptors {
     {title: "Alex Kurata"},
     {name: "description", content: "Alex Kurata resume"},
   ];
+}
+
+export async function clientLoader() {
+  // Load Particles engine in page load
+  await loadParticlesEngine();
 }
 
 export function Layout({children}: {children: React.ReactNode}) {
@@ -66,7 +76,12 @@ export default function App() {
 
   return (
     <HeroUIProvider navigate={navigate} useHref={useHref}>
-      <Outlet />
+      <div className="relative flex h-dvh w-full flex-col overflow-hidden">
+        <main className="z-10 container mx-auto flex flex-1 flex-col items-center justify-center overflow-hidden px-8">
+          <Outlet />
+        </main>
+        <ParticleBackground />
+      </div>
     </HeroUIProvider>
   );
 }

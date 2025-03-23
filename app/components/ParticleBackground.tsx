@@ -1,4 +1,3 @@
-import {useEffect, useState} from "react";
 import {MoveDirection, OutMode, type ISourceOptions} from "@tsparticles/engine";
 import Particles, {initParticlesEngine} from "@tsparticles/react";
 // import {loadAll} from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
@@ -46,35 +45,24 @@ const particleOptions: Record<string, ISourceOptions> = {
   },
 };
 
+// Client loader function for initializing the particles
+// engine for the background component
+export async function loadParticlesEngine() {
+  await initParticlesEngine(async (e) => {
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    // await loadAll(engine);
+    // await loadFull(engine);
+    await loadSlim(e);
+    // await loadBasic(engine);
+  });
+}
+
 export function ParticleBackground() {
-  const [init, setInit] = useState(false);
-
-  // this should be run only once per application lifetime
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      // await loadAll(engine);
-      // await loadFull(engine);
-      await loadSlim(engine);
-      // await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
   return (
-    <div className="absolute w-screen h-screen">
-      {init && (
-        <Particles
-          id="tsparticles"
-          particlesLoaded={async (container) => {
-            console.log(container);
-          }}
-          options={particleOptions.stars}
-        />
-      )}
+    <div className="absolute w-screen h-screen z-0">
+      <Particles id="tsparticles" options={particleOptions.stars} />
     </div>
   );
 }
