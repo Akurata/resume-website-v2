@@ -1,4 +1,13 @@
-import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "react-router";
+import {
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useHref,
+  useNavigate,
+  type NavigateOptions,
+} from "react-router";
 import {HeroUIProvider} from "@heroui/react";
 
 import type {Route} from "./+types/root";
@@ -28,7 +37,7 @@ export function meta(): Route.MetaDescriptors {
 
 export function Layout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,18 +53,31 @@ export function Layout({children}: {children: React.ReactNode}) {
   );
 }
 
-export default function App() {
+export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
   return (
-    <HeroUIProvider>
+    <main className="h-screen w-screen pt-16 p-4 container mx-auto">
+      <h1>Error</h1>
+    </main>
+  );
+}
+
+export default function App() {
+  const navigate = useNavigate();
+
+  return (
+    <HeroUIProvider navigate={navigate} useHref={useHref}>
       <Outlet />
     </HeroUIProvider>
   );
 }
 
-export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
-  return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>Error</h1>
-    </main>
-  );
+/**
+ * Extend shared react type to use
+ * the react-router navigation options
+ * (mainly viewTransition)
+ */
+declare module "@react-types/shared" {
+  interface RouterConfig {
+    routerOptions: NavigateOptions;
+  }
 }

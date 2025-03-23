@@ -14,8 +14,8 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col text-center">
-            <span>🖥️ alexkurata.com</span>
-            <span>📧 alex@alexkurata.com</span>
+            <span>🖥️ alexkurata.com 🖥️</span>
+            <span>📧 alex@alexkurata.com 📧</span>
           </div>
         </section>
       </main>
