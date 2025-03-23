@@ -1,8 +1,3 @@
-/**
- * TODO: Generate robots.txt and sitemap.xml for SEO + indexing
- * @returns
- */
-
 export default function Index() {
   return (
     <section className="flex flex-col items-center justify-center gap-[18px] sm:gap-6">

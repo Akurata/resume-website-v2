@@ -1,3 +1,9 @@
 User-agent: *
-Disallow: 
+
+###############################################################
+# TODO: blocking resume indexing until final version is ready #
+###############################################################
+Disallow: /home/
+Disallow: /Resume.pdf
+
 Sitemap: https://alexkurata.com/sitemap.xml
