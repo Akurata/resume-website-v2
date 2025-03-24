@@ -24,6 +24,7 @@
         "@types/react": "^19.0.1",
         "@types/react-dom": "^19.0.1",
         "autoprefixer": "^10.4.21",
+        "devicons-react": "^1.4.0",
         "postcss": "^8.5.3",
         "react-router-devtools": "^1.1.0",
         "tailwindcss": "^3.4.4",
@@ -917,6 +918,8 @@
     "detect-libc": ["detect-libc@2.0.3", "", {}, "sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw=="],
 
     "detect-node-es": ["detect-node-es@1.1.0", "", {}, "sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ=="],
+
+    "devicons-react": ["devicons-react@1.4.0", "", { "peerDependencies": { "react": "*" } }, "sha512-RePDf19W/x66OA6GciO9rcNakbbXCvo3z8QN5WfoZ38ahPTPTZehhIyxxoBd4UDit0U6j8Szq7G11ZKRAEogSg=="],
 
     "didyoumean": ["didyoumean@1.2.2", "", {}, "sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw=="],
 
