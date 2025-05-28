@@ -2,5 +2,5 @@ name = "resume-website-v2"
 pages_build_output_dir = "./build/client"
 
 [vars]
-BUN_VERSION = "1.2.5"
+BUN_VERSION = "1.2.15"
 NODE_VERSION = "22.14.0"

@@ -1,18 +1,6 @@
-# Welcome to React Router!
+# Alex Kurata Resume Website v2
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Resume website hosted on [CloudFlare](https://dash.cloudflare.com/b366b20cbdebe9d473d6d718912f0c0a/pages/view/resume-website-v2) and deployed to [alexkurata.com](https://alexkurata.com)
 
 ## Getting Started
 
@@ -21,7 +9,7 @@ A modern, production-ready template for building full-stack React applications u
 Install the dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development
@@ -29,7 +17,7 @@ npm install
 Start the development server with HMR:
 
 ```bash
-npm run dev
+bun dev
 ```
 
 Your application will be available at `http://localhost:5173`.
@@ -39,49 +27,15 @@ Your application will be available at `http://localhost:5173`.
 Create a production build:
 
 ```bash
-npm run build
+bun run build
 ```
+
+Outputs `build/client` directory statically compiled (SSG) assets for hosting.
 
 ## Deployment
 
-### Docker Deployment
+### Cloudflare Pages
 
-To build and run using Docker:
+CI/CD configured through CloudFlare pages site.
 
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+This will automatically build and deploy the `main` branch using the `wrangler.toml` file.
