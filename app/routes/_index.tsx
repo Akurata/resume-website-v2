@@ -1,3 +1,5 @@
+import ResumeButton from "app/components/ResumeButton";
+
 export default function Index() {
   return (
     <section className="flex flex-col items-center justify-center gap-[18px] sm:gap-6">
@@ -12,6 +14,10 @@ export default function Index() {
       <div className="flex flex-col text-center">
         <span>🖥️ alexkurata.com 🖥️</span>
         <span>📧 alex@alexkurata.com 📧</span>
+      </div>
+
+      <div>
+        <ResumeButton />
       </div>
     </section>
   );
