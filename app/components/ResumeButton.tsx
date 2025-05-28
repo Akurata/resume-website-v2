@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
-export default function () {
+export default function ResumeButton() {
   return (
     <Button
       as={Link}
