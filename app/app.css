@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+@plugin "../hero.ts";
+
+@theme {
+  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --background-image-hero-section-title: linear-gradient(
+    91deg,
+    #fff 32.88%,
+    rgba(255, 255, 255, 0.4) 99.12%
+  );
+}
 
 html,
 body {
@@ -9,6 +19,4 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
-
-  text-shadow: 1rem;
 }
