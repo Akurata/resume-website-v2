@@ -1,9 +1,8 @@
-import type {Config} from "@react-router/dev/config";
+import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Config options...
-  // Server-side render by default, to enable SPA mode set this to `false`
+  // SPA mode — static site generation, no server runtime needed
   ssr: false,
-
-  prerender: ["/", "/home"],
+  // Only prerender the root page (single-page resume site)
+  prerender: ["/"],
 } satisfies Config;
