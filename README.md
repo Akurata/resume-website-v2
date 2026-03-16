@@ -1,41 +1,93 @@
-# Alex Kurata Resume Website v2
+# alexkurata.com — Personal Resume Site
 
-Resume website hosted on [CloudFlare](https://dash.cloudflare.com/b366b20cbdebe9d473d6d718912f0c0a/pages/view/resume-website-v2) and deployed to [alexkurata.com](https://alexkurata.com)
+A professional single-page resume site for Alex Kurata, built with React 19, React Router v7, Tailwind CSS v4, HeroUI, and an ambient particle background (space theme).
 
-## Getting Started
+**Live:** [alexkurata.com](https://alexkurata.com)
 
-### Installation
+---
 
-Install the dependencies:
+## Stack
 
-```bash
-bun install
+| Layer         | Technology                                      |
+| ------------- | ----------------------------------------------- |
+| Framework     | React 19 + React Router v7 (SPA mode)           |
+| Styling       | Tailwind CSS v4 + HeroUI component library      |
+| Particles     | tsParticles (slim bundle)                        |
+| Icons         | Iconify + Devicons CDN                           |
+| Build         | Vite 7                                           |
+| Hosting       | Cloudflare Pages                                 |
+| Type Safety   | TypeScript 5.9                                   |
+
+## Project Structure
+
+```
+resume-website-v2/
+├── app/
+│   ├── components/         # UI components
+│   │   ├── HeroSection.tsx         # Name, title, contact, CTA
+│   │   ├── ExperienceSection.tsx   # Timeline of roles
+│   │   ├── SkillsSection.tsx       # Categorized tech skills
+│   │   ├── EducationSection.tsx    # Academic credentials
+│   │   ├── Navigation.tsx          # Floating scroll-aware nav
+│   │   ├── ParticleBackground.tsx  # Ambient star field
+│   │   └── Footer.tsx              # Copyright
+│   ├── content/            # Data files (no JSX)
+│   │   ├── experiences.ts          # Work history
+│   │   ├── skills.ts               # Technical skills by category
+│   │   └── education.ts            # Education
+│   ├── routes/
+│   │   └── _index.tsx              # Main (and only) page
+│   ├── root.tsx            # App shell, SEO, JSON-LD
+│   └── app.css             # Global styles
+├── public/
+│   ├── AlexKurataResume.pdf        # Downloadable resume
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── _headers                    # Cloudflare Pages headers
+│   └── _redirects                  # Cloudflare Pages redirects
+├── wrangler.toml           # Cloudflare Pages config
+├── vite.config.ts
+├── react-router.config.ts  # SPA mode, prerender config
+└── package.json
 ```
 
-### Development
-
-Start the development server with HMR:
+## Development
 
 ```bash
-bun dev
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Production build
+npm run build
+
+# Type check
+npm run typecheck
 ```
 
-Your application will be available at `http://localhost:5173`.
+## Build Output
 
-## Building for Production
+The production build outputs to `./build/client/` — this is the directory configured in `wrangler.toml` as the Cloudflare Pages build output.
 
-Create a production build:
+## SEO
 
-```bash
-bun run build
-```
+- Full Open Graph and Twitter Card meta tags
+- JSON-LD structured data (`Person` schema)
+- Canonical URL
+- `robots.txt` with sitemap reference
+- `sitemap.xml`
+- Semantic HTML with proper heading hierarchy
+- Accessible navigation with skip links and ARIA labels
 
-Outputs `build/client` directory statically compiled (SSG) assets for hosting.
+## Design Philosophy
 
-## Deployment
+- **Space theme, professional tone:** A subtle particle star field creates visual interest without competing with content. Dark background with carefully tuned text opacity creates depth.
+- **Content-first:** Experiences are presented as concise, impact-focused bullet points. No fluff.
+- **Responsive:** Full mobile support with stacked layouts at small breakpoints.
+- **Performance:** SPA mode with prerendering, immutable asset caching, and lazy particle loading.
 
-### Cloudflare Pages
+## License
 
-CI/CD configured through CloudFlare pages site.
-
-This will automatically build and deploy the `main` branch using the `wrangler.toml` file.
+Private — Alex Kurata

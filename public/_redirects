@@ -1,0 +1,5 @@
+# Redirect /home to root (cleanup old route)
+/home  /  301
+
+# SPA fallback — serve index.html for all client-side routes
+/*     /index.html  200

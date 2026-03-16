@@ -1,0 +1,306 @@
+%-------------------------
+% Resume in Latex
+% Original Author : Sourabh Bajaj 
+% 	from https://www.sharelatex.com/templates/cv-or-resume/software-developer-resume
+% Edited by : Si Ya Ni and Alan Labouseur
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Dependencies
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\RequirePackage{fontawesome}
+\usepackage{multicol}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\footskip=0pt
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\titlespacing*{\section}{0pt}{1\baselineskip}{\baselineskip}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands for Experience Section
+\newcommand{\resumeItem}[2]{
+    \item\small{
+        \textbf{#1}{#2 \vspace{-2pt}}
+    }
+}
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-1pt}
+        \item \textbf{#1} \hfill #2 \\
+        \textit{\small#3} \hfill \textit{\small #4} \\
+    \vspace{-8pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+
+% Bullet point list style
+\renewcommand{\labelitemii}{$\circ$}
+
+%-------------------------------------------
+%-------------------------------------------
+%%%%%%  RESUME / CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------
+%-------------------------------------------
+
+
+\begin{document}
+
+
+%----------HEADING-----------------
+\begin{tabular*}
+    {\textwidth}{l@{\extracolsep{\fill}}r} \textbf{{\LARGE Alexander Kurata}} & {\faGithubSquare} \href{https://github.com/akurata}{ GitHub} \quad \\
+    {\faEnvelope} \href{mailto:akurata100@gmail.com}{alex@alexkurata.com} \textbar \hspace{.1cm} {\faMobile \hspace{.01cm}} {(203)214-3333} & {\href{https://alexkurata.com}{ alexkurata.com}}
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+        {Marist University}{Poughkeepsie, NY}
+        {Bachelor of Science in Computer Science; Minors in Information Technology \& Information Systems}{Graduated 2020}
+\resumeSubHeadingListEnd
+
+\vspace{1pt}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+    % adjust according to the number of sections you have
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {IBM}{Armonk, NY}
+        {Hybrid Cloud Software Engineer - Band 7}{July 2023 - present}
+        \resumeItemListStart
+            \resumeItem{}
+                {Promoted to a Band 7 engineer, which put me in charge of many more complex projects focused mainly on supporting the backend architecture of our hybrid cloud platform.}
+            \resumeItem{}
+                {Specialized in triaging and fixing complex issues that arose in the platform. Expanded the platform to support even more use cases and host a diverse range of workloads. I found myself dropped into many difficult debugging threads where I flourished in breaking down issues and coordinating a solution with my team and the client.}
+            \resumeItem{}
+                {Architected and implemented a series of Kubernetes operators for distributed workload placement and scheduling. This allowed us to efficiently and cost-effectively utilize a global network of infrastructure across many data centers to optimally run workloads at a truly unleashed scale.}
+             \resumeItem{}
+                {Served as a consultant for many teams within IBM for accelerating the delivery of services that require specialized hybrid cloud knowledge.}
+            \resumeItem{}
+                {I became the Golang-SME and Kubernetes-SME for my team.}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {IBM}{Armonk, NY}
+        {Hybrid Cloud Software Engineer - Band 6}{July 2021 - July 2023}
+        \resumeItemListStart
+            \resumeItem{}
+                {Full stack engineer for an internal hybrid cloud platform focusing mainly on containers built on OpenShift.
+                My job initially consisted of burning through backlog tickets for UI/UX improvements;
+                I eventually moved on to drive integration and improvement initiatives on the team, like 
+                integrating a partner team into our portal, or planning and implementing optimization
+                improvements to address customer complaints.}
+            \resumeItem{}
+                {Supported a multi-functional cloud platform used by thousands of IBM-ers and their clients across the globe. This includes working with other developers globally to deliver a reliable product.}
+            \resumeItem{}
+                {Built a portal with React and Node reverse proxy, supported by a Golang microservice architecture.}
+            \resumeItem{}
+                {Built Kubernetes operators using kubebuilder/operator-sdk.}
+            \resumeItem{}
+                {Build CICD pipelines in Tekton, and leveraged many other industry standard tools like Argo for managing deployments.}
+            \resumeItem{}
+                {Hosted VMs for clients using KubeVirt using an operator that we developed to manage and configure virtualized workloads.}
+            \resumeItem{}
+                {Implemented best practices by design serve a secure platform that conforms to IBMs global standards for security and data compliance.}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {Voterlabs Inc.}{Branford, CT}
+        {Full Stack Developer}{August 2020 - July 2021}
+        \resumeItemListStart
+            \resumeItem{}
+                {Voterlabs is a machine learning and consumer analytics company, that enriches, sanitizes, and models provided consumer data using over 50 different parameterized algorithms}
+            \resumeItem{}
+                {I was brought on to do re-engineer and optimize Voterlab's client facing API and upgrading their Angular dashboard.}
+            \resumeItem{}
+                {This project required me to implement: 2 Flask APIs with accompanying Postgres databases (one as a client facing API that can be deployed in clusters or 'ad hoc', with the other as a proxy/host to all of our enhancement microservices and main database); An Angular frontend; and 2 Celery Worker queues consuming from a Redis broker which handle large batch jobs}
+            \resumeItem{}
+                {The technical stack I managed for this application was quite large compared to anything I'd worked on before, and being the only developer on staff was quite intimidating at first. This motivated me to incorporate better CI/CD practices to meet deadlines and maintain a consistent stream of communication between me and the other departments. This stack was all deployed in docker on AWS EC2 instances, utilizing a Jenkins pipeline.}
+        \resumeItemListEnd
+
+    \clearpage
+
+    \resumeSubheading
+        {SPARK Business Academy}{Remotely}
+        {Contract Web Developer}{July 2019 - April 2021}
+        \resumeItemListStart
+            \resumeItem{}
+                {Full stack development, working independently to build and implement a new website from the ground up. My later responsibilities with the company were composed primarily training the new technical staff.}
+            \resumeItem{}
+                {Created a complete website with back end tools for administrators.}
+            \resumeItem{}
+                {Technical consulting services.}
+            \resumeItem{}
+                {Quickly building and managing a small business tech infrastructure.}
+            \resumeItem{}
+                {Practice with user management, protecting user data, and maintaining proficient security standards.}
+            \resumeItem{}
+                {This project's technical stack was a NodeJS server with MySQL database. I designed the frontend by hand before I learned what a MIT license did; I then transitioned the project to an angular dashboard template. Multiple project versions were deployed on Google Cloud VMs}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {Brandon Copeland Website Design/Deployment}{Remotely}
+        {Full Stack Developer}{July 2020 - October 2020}
+        \resumeItemListStart
+            \resumeItem{}
+                {Working with Patriots player Brandon Copeland to design and implement a new website with appropriate infrastructure.}
+            \resumeItem{}
+                {My team worked closely with Brandon and his brother Chad to overhaul their web presence. It was difficult to highlight the wide breadth of Brandon's accomplishments, while also bringing attention to the his newer programs for youth financial education.}
+            \resumeItem{}
+                {We deployed a heavily customized Angular front end, with a NodeJS API, and Postgres database, which were deployed in docker and proxied through Nginx and run on a Google Cloud VM.}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {Student Researcher}{Poughkeepsie, NY}
+        {Researcher and Developer}{August 2019 - May 2020}
+        \resumeItemListStart
+            \resumeItem{}
+                {Working with a professor at Marist University for a project funded by Verifikado.}
+            \resumeItem{}
+                {Developing a NLP algorithm to label and contrast parts of speech using sentiment analysis.}
+            \resumeItem{}
+                {The purpose of the research was to catalog and compare the tone, character, and overall sentiment of digitally published news articles.}
+            \resumeItem{}
+                {This project also required me to build a full stack web application to interface with the various processing models we created. This was a bootstrap frontend dashboard, Flask API backend, and a Postgres database all containerized in docker and deployed on a Google Cloud VM.}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {Senior Capping Project}{Poughkeepsie, NY}
+        {Web Developer}{August 2019 - December 2019}
+        \resumeItemListStart
+            \resumeItem{}
+                {Full stack developer, creating archival record management software for the Greene County Historical society intended for use at the Vedder Research Library.}
+            \resumeItem{}
+                {Building a fully scalable web application, that provides many tools and services for library administrators and researchers.}
+            \resumeItem{}
+                {The technical stack for this project was a NodeJS server and Postgres database, designed to be containerized in docker and run on a specialized operating system for the library.}
+            \resumeItem{}
+                {Working in an agile setting with a small team.}
+            \resumeItem{}
+                {Extensive time creating concise documentation for future teams to expand upon the project we created.}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+
+    \resumeSubheading
+        {Marist University Web Services}{Poughkeepsie, NY}
+        {Web Developer}{December 2017 - May 2019}
+        \resumeItemListStart
+            \resumeItem{}
+                {Developing and implementing the current marist.edu website in a large scale environment.}
+            \resumeItem{}
+                {Content migration and staff training for the new Marist website.}
+            \resumeItem{}
+                {Experience in disaster recovery and management.}
+            \resumeItem{}
+                {Spent time designing Alexa Skills as a micro-service for the university.}
+            \resumeItem{}
+                {Developing and previously managing an app for Marist security to track utilities across campus.}
+        \resumeItemListEnd
+
+    \vspace{-1.00mm}
+     
+    \resumeSubheading
+        {TBNG Zentific}{Milford, CT}
+        {Summer Intern UX/UI Developer}{June 2017 - August 2017}
+        \resumeItemListStart
+            \resumeItem{}
+                {Working on developing web assets in React..}
+            \resumeItem{}
+                {Developing a client interface for a cloud computing RPC security application.}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+  
+% \vspace{-20pt}
+\clearpage
+
+
+%--------RELEVANT COURSEWORK AND PROJECTS------------
+\section{Skills}
+    \begin{multicols}{5}
+    \begin{itemize}
+        \item AWS
+        \item Angular
+        \item Bootstrap
+        \item C/C++
+        \item CSS/SCSS
+        \item Docker
+        \item Google Cloud
+        \item HTML
+        \item JQuery
+        \item Java
+        \item JavaScript
+        \item Kubernetes
+        \item MySQL
+        \item Nginx
+        \item NodeJS
+        \item PHP
+        \item Postgres
+        \item Python
+        \item React
+        \item Scala
+        \item TypeScript
+        \item Golang
+        \item Rust
+        \item Argo
+        % \item[\vspace{\fill}]
+    \end{itemize}
+    \end{multicols}
+    
+% %--------REFERENCES------------
+\section{References}
+ \textit{Brandished upon request}
+
+%-------------------------------------------
+\end{document}
